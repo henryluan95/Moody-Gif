@@ -8,7 +8,7 @@ Moody Gif is an application where you get a gif of your choice by simply typing 
 
 The result is a fully responsive and functional web application with a fantastic design.
 
-Please click here for the live website: https://paperman.vercel.app/
+Please click here for the live website: https://moody-gif.vercel.app/
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 

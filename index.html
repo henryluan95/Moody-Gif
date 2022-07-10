@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moody Gif</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main class="content">
+      <section class="gif">
+        <h1 class="gif__title">Moody GIF<span>®</span></h1>
+        <div class="gif__content">
+          <div class="gif__container">
+            <img
+              src="https://media2.giphy.com/media/xUOxfjsW9fWPqEWouI/giphy.gif?cid=790b76113128c9932c60f6a7025f17e14caee48281149232&rid=giphy.gif&ct=g"
+              alt=""
+              class="gif__image"
+            />
+            <!-- <img src="https://media3.giphy.com/media/puzeKEW8WOms7pDUMx/giphy.gif?cid=c8526a19zhrc09tiuly2abt0c2dhemoief6slvvix4ta6di7&rid=giphy.gif&ct=g" alt="" class="gif__image"> -->
+          </div>
+          <form action="" class="gif__form form">
+            <h2 class="form__title">What is the vibe for today?</h2>
+            <label for="search"></label>
+            <input
+              type="text"
+              id="search"
+              name="search"
+              class="form__input"
+              placeholder="Call It"
+            />
+            <div class="buttons">
+              <button
+                type="submit"
+                class="buttons__item buttons__item--generate"
+              >
+                Generate
+              </button>
+              <button type="submit" class="buttons__item buttons__item--random">
+                Surprise Me!
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

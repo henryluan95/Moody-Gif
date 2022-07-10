@@ -1,0 +1,290 @@
+@use "../partials/typography" as *;
+@use "../partials/mixin" as *;
+
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+.content {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+span {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 1px;
+  right: 14px;
+  cursor: pointer;
+  @include tablet {
+    font-size: 1.3rem;
+    top: 6px;
+    right: 110px;
+  }
+  @include desktop {
+    font-size: 1.3rem;
+    right: 153px;
+  }
+
+  &::after {
+    content: "You give us a vibe. We give you a gif";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid white;
+    background: rgba(170, 170, 170, 0.533);
+    border-radius: 10px;
+    min-width: 10rem;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.gif {
+  width: 80%;
+  min-height: 30rem;
+  border-radius: 2rem;
+  position: relative;
+  background: inherit;
+  box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2.25rem;
+    position: relative;
+    @include tablet {
+      font-size: 4rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 17%;
+    max-height: 25rem;
+    object-fit: cover;
+
+    @include tablet {
+      padding: 3rem 4rem;
+    }
+    @include desktop {
+      width: 34rem;
+    }
+  }
+
+  &__form {
+    min-height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop {
+      justify-content: space-evenly;
+      height: 30rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      margin-bottom: 2rem;
+      //   width: 100%;
+    }
+    @include desktop {
+      // width: 50%;
+    }
+  }
+  &__emoji {
+    max-width: 2rem;
+    animation: wave 2s infinite ease-in-out;
+    @include tablet {
+      max-width: 3rem;
+    }
+    @include desktop {
+      max-width: 4rem;
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__error {
+    font-size: 1.5rem;
+    font-weight: 500;
+    animation: wave 2s infinite ease-in-out;
+    @include tablet {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    @include desktop {
+      font-size: 2.75rem;
+      padding: 0 3rem;
+      text-align: center;
+      width: 30rem;
+      // margin-right: 4rem;
+    }
+  }
+}
+
+.form {
+  &__title {
+    padding: 0px 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    @include tablet {
+      font-size: 2.125rem;
+      margin-top: 0;
+    }
+    @include desktop {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    width: 65%;
+    border: none;
+    outline: none;
+    font-family: "Montserrat";
+    border-radius: 4px;
+    height: 1.25rem;
+    @include tablet {
+      height: 3rem;
+      border-radius: 10px;
+      border: none;
+      padding: 0 1rem;
+      font-size: 1.25rem;
+    }
+
+    @include desktop {
+      height: 3.5rem;
+      width: 95%;
+      font-size: 1.5rem;
+    }
+  }
+}
+.buttons {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  @include tablet {
+    height: 2.75rem;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include desktop {
+    width: 95%;
+  }
+  &__item {
+    border: none;
+    height: 2rem;
+    border-radius: 5%;
+    background-color: #23a6d5;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      animation: bounce 1s ease-in-out;
+    }
+    &--random {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    @include tablet {
+      height: 2.75rem;
+      font-size: 1.25rem;
+      min-width: 10rem;
+      border-radius: 10px;
+    }
+    @include desktop {
+      height: 4rem;
+      font-size: 1.5rem;
+      min-width: 12rem;
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0px);
+  }
+  25% {
+    transform: translate(0, -10px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
